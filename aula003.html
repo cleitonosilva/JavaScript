@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula001 de Js</title>
+    <style>
+        body {
+            background-color: rgb(105, 105,173);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 { 
+            color: rgb(255, 212, 22)
+        }
+    </style>
+</head>
+<body>
+<h1>Estudo de JavaScript </h1>    
+<p> Vamos estudar JavaScript</p>
+
+
+
+<script>   
+// converter com Number.parseInt os numeros para number pois de default o window prompt retorna string 
+// o + apenas soma se os numeros forem do tipo number .. caso não ele concatena 
+// converter com numeros quebrado .. com ponto utilizasse o Numer.paseFloat FLOAT igual a ponto
+// utilizar para apenas NUMBER para ser mesclado o proprio js escolhe se soma numeros inteiros ou quebrados 
+
+    const n1 = Number.parseInt(window.prompt('digite um numero '))
+    const n2 = Number.parseInt(window.prompt('digite outro numero '))
+    const soma = n1 + n2 
+    const convert = String(n1) + String(n2)
+    window.alert( 'a soma dos valores é ' + soma )
+    window.alert( 'você somou o numero ' + n1 + ' com o numero' + n2 )
+
+    // utilizasse o String() para converter em string ou n.toString()
+    // o exemplo abaixo knão utiliza a interpolação (templateString) ele apenas concatena (+) 
+    window.alert( 'caso não quisesse a soma a concatenação seria ' + String(n1) + n2.toString() )
+
+    // o exemplo abaixo já utiliza o o template string / lembrando que deve sempre iniciar com crase e a interpolação dentro de ${}
+ window.alert( `Caso não quisesse a soma e sim a junção do ${n1} e o ${n2} o resultado seria de ${convert} `)
+
+
+</script>
+</body>
+</html>
